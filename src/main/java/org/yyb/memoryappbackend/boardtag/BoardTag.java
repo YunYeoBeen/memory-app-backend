@@ -1,23 +1,26 @@
-package org.yyb.memoryappbackend.board;
+package org.yyb.memoryappbackend.boardtag;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.yyb.memoryappbackend.board.Board;
+import org.yyb.memoryappbackend.tag.Tag;
 
 @Entity
 @NoArgsConstructor
 @Getter
-public class Board {
+public class BoardTag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "board_id")
     private Long id;
 
-    private String contents;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "board_id")
+    private Board board;
 
-    private String title;
-
-    private String nickName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tag_id")
+    private Tag tag;
 
 }

@@ -1,1 +1,18 @@
-spring.application.name=memory-app-backend
+spring:
+  application:
+    name: memory-app-backend
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: your_username
+    password: your_password
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # ?? ??? update / ??? none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        show_sql: true
+        format_sql: true

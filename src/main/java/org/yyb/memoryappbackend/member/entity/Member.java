@@ -1,4 +1,4 @@
-package org.yyb.memoryappbackend.user;
+package org.yyb.memoryappbackend.member.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import org.yyb.memoryappbackend.common.BaseEntity;
 @Entity
 @NoArgsConstructor
 @Getter
-public class User extends BaseEntity {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

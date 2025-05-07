@@ -1,4 +1,4 @@
-package org.yyb.memoryappbackend.board;
+package org.yyb.memoryappbackend.board.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import org.yyb.memoryappbackend.common.BaseEntity;
 public class Board extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "board_id")
     private Long id;
 

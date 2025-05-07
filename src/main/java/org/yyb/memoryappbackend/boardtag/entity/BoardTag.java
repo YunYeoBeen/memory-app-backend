@@ -1,9 +1,9 @@
-package org.yyb.memoryappbackend.boardtag;
+package org.yyb.memoryappbackend.boardtag.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.yyb.memoryappbackend.board.Board;
+import org.yyb.memoryappbackend.board.entity.Board;
 import org.yyb.memoryappbackend.tag.Tag;
 
 @Entity

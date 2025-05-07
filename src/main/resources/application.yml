@@ -1,18 +1,22 @@
 spring:
   application:
     name: memory-app-backend
-
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:XE
-    username: your_username
-    password: your_password
-    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:h2:file:~/testdb
+    driver-class-name: org.h2.Driver
+    username: assy110
+    password: plus1932$
 
   jpa:
     hibernate:
-      ddl-auto: update   # ?? ??? update / ??? none
+      ddl-auto: create  # create, update, validate 등 상황에 따라
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.Oracle12cDialect
+        dialect: org.hibernate.dialect.H2Dialect
         show_sql: true
         format_sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
